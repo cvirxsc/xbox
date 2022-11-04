@@ -13,7 +13,7 @@ while not done:
     for event_ in pygame.event.get():
         if event_.type == pygame.JOYAXISMOTION or event_.type ==pygame.JOYHATMOTION:
             try:
-                joystick.rumble(low_frequency=1,duration=0.5)
+                joystick.rumble(high_frequency=10,low_frequency=1,duration=0.5)
             except KeyboardInterrupt:
                 print("无法通过脚本控制电机")
 pygame.quit()
